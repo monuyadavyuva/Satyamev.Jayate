@@ -1,0 +1,24 @@
+const btn = document.getElementById("darkBtn");
+
+btn.onclick = function () {
+    document.body.classList.toggle("dark");
+};
+
+const style = document.createElement("style");
+style.innerHTML = `
+.dark{
+    background:#111;
+    color:white;
+}
+.dark .card{
+    background:#222;
+    color:white;
+}
+.dark header{
+    background:#111;
+}
+.dark footer{
+    background:#000;
+}
+`;
+document.head.appendChild(style);
